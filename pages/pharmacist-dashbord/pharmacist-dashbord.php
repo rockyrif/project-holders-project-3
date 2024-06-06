@@ -1,4 +1,6 @@
-
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medical Prescription Upload System</title>
 
-    
+
 
     <style>
         body,
@@ -17,13 +19,13 @@
             font-family: Arial, sans-serif;
         }
 
-        .container{
+        .container1 {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: url('images/bg.jpg') no-repeat center center;
+            background: url('../../images/bg.jpg') no-repeat center center;
             background-size: cover;
         }
 
@@ -39,7 +41,7 @@
         }
 
         .buttons {
-           
+
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -50,7 +52,7 @@
 
         }
 
-        button {
+        .button {
             flex-basis: 48%;
             height: 80px;
             border-radius: 50px;
@@ -63,11 +65,11 @@
             font-size: 30px;
         }
 
-        .customer-btn {
+        .button-1 {
             background-color: #00bfff;
         }
 
-        .pharmacist-btn {
+        .button-2 {
             background-color: #32cd32;
         }
 
@@ -91,11 +93,14 @@
 </head>
 
 <body>
-    
-    <div class="container">
+
+    <div class="container1">
+        <?php
+        include '../../components/navbar/navbar.php';
+        ?>
         <div class="buttons">
-            <button  onclick="window.location.href='pages/login-and-signup-page/index.php?privilage=customer'" class="button customer-btn">I am a customer</button>
-            <button  onclick="window.location.href='pages/login-and-signup-page/index.php?privilage=pharmacist'" class="button pharmacist-btn">I am a pharmacist</button>
+            <button class="button button-1" onclick="window.location.href='pages/login-and-signup-page/index.php?privilage=customer'" class="button customer-btn">I am a customer</button>
+            <button class="button button-2" onclick="window.location.href='pages/login-and-signup-page/index.php?privilage=pharmacist'" class="button pharmacist-btn">I am a pharmacist</button>
         </div>
     </div>
 </body>
