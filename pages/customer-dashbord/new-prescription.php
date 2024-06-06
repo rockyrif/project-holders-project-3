@@ -87,9 +87,6 @@ if ((!isset($_SESSION["id"]) && isset($_SESSION["username"])) || $_SESSION["priv
             // Loop through query results
             while ($row = mysqli_fetch_assoc($result)) {
 
-               
-
-
                // Include PHPMailer autoload
                require '../../PHP-mailer/vendor/autoload.php';
 
@@ -138,7 +135,7 @@ if ((!isset($_SESSION["id"]) && isset($_SESSION["username"])) || $_SESSION["priv
 
 
          $_SESSION['response'] = "Files and datas uploaded successfully.";
-         // header("location:new-prescription.php");
+         header("location:new-prescription.php");
          exit;
       }
 
