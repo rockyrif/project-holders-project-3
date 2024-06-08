@@ -63,11 +63,11 @@ if ((!isset($_SESSION["id"]) && isset($_SESSION["username"])) || $_SESSION["priv
          }
 
          // Prepare the SQL statement
-         $sql = "INSERT INTO prescription_and_address (pharmacy_id, customer_id, images, note, delivery_address, delivery_time_1, delivery_time_2) VALUES (?, ?, ?, ?, ?, ?, ?)";
+         $sql = "INSERT INTO prescription_and_address (pharmacy_id, customer_id, email, images, note, delivery_address, delivery_time_1, delivery_time_2) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
          // Prepare and bind
          $stmt = $conn->prepare($sql);
-         $stmt->bind_param("iisssss", $pharmacy_id, $customer_id, $directory, $note, $address, $delivery_time_1, $delivery_time_2);
+         $stmt->bind_param("iissssss", $pharmacy_id, $customer_id, $email, $directory, $note, $address, $delivery_time_1, $delivery_time_2);
 
          // Execute the statement
          if (!$stmt->execute()) {
@@ -275,6 +275,8 @@ if ((!isset($_SESSION["id"]) && isset($_SESSION["username"])) || $_SESSION["priv
                      <label class="form-label">Delivery time 2:</label>
                      <input type="datetime-local" class="form-control" name="delivery_time_2" required>
                   </div>
+
+                  
 
                   <div class="mb-3">
                      <button id="submitButton" type="submit" class="btn btn-success" name="submit">Apply</button>

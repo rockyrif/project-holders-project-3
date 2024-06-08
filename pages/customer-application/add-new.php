@@ -104,7 +104,7 @@ if ((!isset($_SESSION["id"]) && isset($_SESSION["username"])) || $_SESSION["priv
 
                   <div class="mb-3">
                      <label class="form-label">Name:</label>
-                     <input type="text" class="form-control" name="name" placeholder="eg:Harcourts" required>
+                     <input type="text" class="form-control" name="name" placeholder="eg:rocky" required>
                   </div>
 
                   <div class="mb-3" style="display:none;">

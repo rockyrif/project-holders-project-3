@@ -137,7 +137,7 @@ if ((!isset($_SESSION["id"]) && isset($_SESSION["username"])) || $_SESSION["priv
       </html>
 <?php
    } else {
-      header("Location: ../pharmacist-dashbord/pharmacist-dashbord.php");
+      header("Location: ../pharmacist-dashbord/prescription-status.php");
    }
 } else {
    header("Location: ../../index.php");

@@ -101,7 +101,7 @@ session_start();
 
         <div class="buttons">
             <button class="button button-1" onclick="window.location.href='new-prescription.php'" class="button customer-btn">Upload new prescription</button>
-            <button class="button button-2" onclick="window.location.href='pages/login-and-signup-page/index.php?privilage=pharmacist'" class="button pharmacist-btn">Check prescription status</button>
+            <button class="button button-2" onclick="window.location.href='prescription-status.php'" class="button pharmacist-btn">Check prescription status</button>
         </div>
     </div>
 </body>

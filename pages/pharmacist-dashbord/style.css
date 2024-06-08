@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: fit-content;
+    overflow-x: hidden;
+    background-color: #ddd;
+
+
+}
+
+/* home start */
+.home {
+    position: relative;
+    top: 0%;
+    height: fit-content;
+}
+
+/* home end */
+
+
+
+
+/* home page section two */
+
+.admin-dashbord {
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    padding-top: 93px;
+    position: relative;
+}
+
+.container-2 {
+    height: 80vh;
+    overflow-x: scroll;
+}
+
+
+
+.admin-dashbord-tittle {
+    text-align: center;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000066;
+    font-family: "PF Din Stencil W01 Bold";
+
+}
+
+.admin-dashbord-info {
+    text-align: justify;
+}
+
+@media only screen and (max-width:1200px){
+    .print-btn{
+        margin-top:5px !important;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .print-btn{
+        margin-top:0px !important;
+    }
+}
+
+.rejected{
+    background-color: red !important;
+    color: white !important;
+}
+.approved{
+    background-color: greenyellow !important;
+}
+.pending{
+    background-color: yellow !important;
+}
